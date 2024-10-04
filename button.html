@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Color Change</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 25%;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="redButton" style="background-color: red;">Red</button>
+    <button id="blueButton" style="background-color: blue;">Blue</button>
+    <button id="greenButton" style="background-color: green;">Green</button>
+    <button id="resetButton">Reset</button>
+
+    <script>
+        const redButton = document.getElementById('redButton');
+        const blueButton = document.getElementById('blueButton');
+        const greenButton = document.getElementById('greenButton');
+        const resetButton = document.getElementById('resetButton');
+
+        redButton.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'red';
+            resetButton.style.backgroundColor = '';
+            alert(" Do u want Red button to be clicked!");
+        });
+
+        blueButton.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'blue';
+            resetButton.style.backgroundColor = '';
+            alert("Do u want Blue button to be clicked!");
+        });
+
+        greenButton.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'green';
+            resetButton.style.backgroundColor = '';
+            alert("Do u wantGreen button to be clicked!");
+        });
+
+        resetButton.addEventListener('click', () => {
+            document.body.style.backgroundColor = '';
+            alert("DO u want Reset button to be clicked!");
+        });
+    </script>
+
+</body>
+</html>
